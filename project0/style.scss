@@ -1,0 +1,52 @@
+$color: blueviolet;
+
+
+li.clicklist::before {
+    content: "Click me to view ";
+}
+
+table {
+    border: 7px solid blue;
+}
+
+th {
+    border: 2px solid $color;
+}
+
+td {
+    border: 2px solid green;
+}
+
+#Hyper {
+    font-size: 35px;
+    font-style: italic;
+    color: $color;
+}
+
+@media screen and (max-width: 600px) {
+    table {
+      display: none;
+    }
+  }
+
+div.nesting {
+    p {
+        font-size: 50px;
+    }
+}
+
+%paragraph {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 46px;
+    font-weight: bold;
+}
+
+.success {
+    @extend %paragraph;
+    color: green;
+}
+
+.error {
+    @extend %paragraph;
+    color: red;
+}
